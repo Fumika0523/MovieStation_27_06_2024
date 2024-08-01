@@ -20,7 +20,7 @@ import textSlice from './utils/textSlice';
 import Cartpage from './Components/Cartpage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import MovieCard from './Components/Movie/MovieCard
+import MovieCard from './Components/Movie/MovieCard'
 
 function App() {
   const AboutUs_LastSection = [
