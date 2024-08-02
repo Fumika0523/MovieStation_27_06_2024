@@ -12,9 +12,7 @@ function MovieDisplay({movieData,setMovieData}){
         // backgroundColor: "black",
         position:"relative",
        border:"1px solid red",
-        cursor: "pointer",
-        
-        
+        cursor: "pointer",        
       }
 
 
