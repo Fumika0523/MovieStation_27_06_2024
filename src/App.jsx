@@ -20,7 +20,7 @@ import textSlice from './utils/textSlice';
 import Cartpage from './Components/Cartpage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import MovieCard from './Components/Movie/MovieCard'
+
 
 function App() {
   const AboutUs_LastSection = [
@@ -83,8 +83,8 @@ const [mode, setMode]=useState("dark")
     <Routes>
       <Route path="/" element={<Homepage movieData={movieData}/>}/>
       {/* prop name should be same as a useState valiable */}
-      <Route path='/allmovies' element={<MovieCard movieData={movieData} setMovieData={setMovieData}/>}/>
-      {/* <Route path='/allmovies' element={<MovieDisplay movieData={movieData} setMovieData={setMovieData} />}/> */}
+  
+      <Route path='/allmovies' element={<MovieDisplay movieData={movieData} setMovieData={setMovieData} />}/>
       {/* <Route path='/addmovie' element={<AddMovie setMovieData={setMovieData} />}/> */}
       <Route path='/addmovie' element={<AddMovie_UI setMovieData={setMovieData}/>}/>
       <Route path='/about' element={<AboutUs_Section/>}/>
