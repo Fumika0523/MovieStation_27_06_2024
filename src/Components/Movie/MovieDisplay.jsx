@@ -5,6 +5,7 @@ function MovieDisplay({movieData,setMovieData}){
     console.log(movieData)
     let displayStyle={
         display:"flex",
+        justifyContent:"center",
         flexWrap:"wrap",
         gap:"1.9%",
         margin:"1.1%",
@@ -13,14 +14,13 @@ function MovieDisplay({movieData,setMovieData}){
        border:"1px solid red",
         cursor: "pointer",
         
+        
       }
 
-    let bodyStyle={
-        border:"1px solid blue",
-    }
+
     return(
     <>
-    <div style={bodyStyle}>
+
     <div style={displayStyle}>
         {/* each movie card */}
     {
@@ -30,7 +30,6 @@ function MovieDisplay({movieData,setMovieData}){
     <MovieCard {...element} key={index} setMovieData={setMovieData} element={element}/>   //spread operator
 ))
     }
-    </div>
     </div>
         </>  
     )
