@@ -10,7 +10,7 @@ function MovieDisplay({movieData,setMovieData}){
         margin:"1.1%",
         // backgroundColor: "black",
         position:"relative",
-    //    border:"1px solid red",
+       border:"1px solid red",
         cursor: "pointer",
         
       }
