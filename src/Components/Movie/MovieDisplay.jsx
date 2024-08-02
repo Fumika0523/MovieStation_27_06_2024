@@ -9,7 +9,7 @@ function MovieDisplay({movieData,setMovieData}){
         gap:"1.9%",
         margin:"1.1%",
         // backgroundColor: "black",
-        // position:"relative",
+        position:"relative",
     //    border:"1px solid red",
         cursor: "pointer",
         
