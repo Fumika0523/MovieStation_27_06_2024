@@ -15,8 +15,12 @@ function MovieDisplay({movieData,setMovieData}){
         
       }
 
+    let bodyStyle={
+        border:"1px solid blue",
+    }
     return(
     <>
+    <div style={bodyStyle}>
     <div style={displayStyle}>
         {/* each movie card */}
     {
@@ -26,6 +30,7 @@ function MovieDisplay({movieData,setMovieData}){
     <MovieCard {...element} key={index} setMovieData={setMovieData} element={element}/>   //spread operator
 ))
     }
+    </div>
     </div>
         </>  
     )
