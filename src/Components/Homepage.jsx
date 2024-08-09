@@ -6,7 +6,7 @@ import Service_Section from "./Service_Section"
 function Homepage({movie}){
     return(
         <>
-        <MovieDisplay movie={movie}/>
+        {/* <MovieDisplay movie={movie}/> */}
         <AboutUs_Section/>
         <Service_Section/>
         <ContactUs_Section/>
