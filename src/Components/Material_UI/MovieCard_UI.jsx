@@ -31,8 +31,8 @@ const ExpandMore = styled((props) => {
 export default function MovieCard_UI({movieposter,moviename,rating,summary,cast,id,setMovieData,element}) {
   const [expanded, setExpanded] = React.useState(false);
 
-  const [summaryShow,setSummaryShow] = useState(false)
-  const [castShow,setCastShow] = useState(false)
+  // const [summaryShow,setSummaryShow] = useState(false)
+  // const [castShow,setCastShow] = useState(false)
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -41,7 +41,7 @@ export default function MovieCard_UI({movieposter,moviename,rating,summary,cast,
   };
 
   return (
-    <Card sx={{ maxWidth: 435 }} >
+    <Card sx={{ maxWidth: 390 }} >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
