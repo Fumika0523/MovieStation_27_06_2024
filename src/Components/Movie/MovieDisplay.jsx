@@ -7,11 +7,12 @@ function MovieDisplay({movieData,setMovieData}){
         display:"flex",
         flexWrap:"wrap",
         gap:"2%",
-        margin:"1.2%",
+        margin:"1.5%",
         // backgroundColor: "black",
         position:"relative",
        border:"1px solid red",
-        cursor: "pointer",        
+        cursor: "pointer",
+        paddingLeft:"2%"        
       }
 
 
