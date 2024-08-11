@@ -7,15 +7,15 @@ import TextField from '@mui/material/TextField';
 export default function AddMovie_UI() {
   return (
    
-    <Box
+  <Box style={{margin:"3% 15%"}}
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 2, width: '40ch' },
+        '& .MuiTextField-root': { width: '45ch' },
       }}
       noValidate
       autoComplete="off"
     >
-       <Stack direction="row"  useFlexGap flexWrap="wrap" spacing={{ xs: 1, sm: 2 }}>
+       <Stack direction="row"  useFlexGap flexWrap="wrap" spacing={{ xs: 2, sm: 4 }}>
   
         {/* MOVIE NAME */}
         <TextField
@@ -34,7 +34,7 @@ export default function AddMovie_UI() {
         />
         <br />
 
-            {/* MOVIE Rating */}
+        {/* MOVIE Rating */}
             <TextField
           required
           id="outlined-required"
@@ -42,7 +42,7 @@ export default function AddMovie_UI() {
           defaultValue="Rating"
         />
 
-            {/* Category */}
+        {/* Category */}
             <TextField
           required
           id="outlined-required"
@@ -59,7 +59,7 @@ export default function AddMovie_UI() {
           defaultValue="Movie Cast"
         />
 
-            {/* MOVIE TRAILER */}
+        {/* MOVIE TRAILER */}
             <TextField
           required
           id="outlined-required"
@@ -67,7 +67,7 @@ export default function AddMovie_UI() {
           defaultValue="Movie Trailer"
         />
           <br />
-            {/* Publish Year */}
+        {/* Publish Year */}
             <TextField
           required
           id="outlined-required"
@@ -75,7 +75,7 @@ export default function AddMovie_UI() {
           defaultValue="Publish Year"
         />
 
-            {/* Like Num */}
+        {/* Like Num */}
             <TextField
           required
           id="outlined-required"
@@ -83,7 +83,7 @@ export default function AddMovie_UI() {
           defaultValue="Like Number"
         />
           <br />
-            {/* DISLIKE NUM */}
+        {/* DISLIKE NUM */}
             <TextField
           required
           id="outlined-required"
@@ -91,7 +91,7 @@ export default function AddMovie_UI() {
           defaultValue="Dislike Number"
         />
        
-            {/* MOVIE GEnres */}
+        {/* MOVIE GEnres */}
             <TextField
           required
           id="outlined-required"
@@ -99,23 +99,19 @@ export default function AddMovie_UI() {
           defaultValue="Genres"
         />
        
-            {/* Summary */}
-            <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Summary" 
-        />
-     
-        {/* ADD MOVIE */}
-        <Button  type="submit" variant="contained">ADD MOVIE</Button>
+  {/* Summary */}
+    <TextField required id="outlined-required"  label="Required" defaultValue="Summary" />
 
-        {/* Back */}
-        <Button type="submit" variant="contained" onClick={()=>{navigate('/allmovies')}} >BACK</Button>
-         
-    </Stack>
-    </Box>
-   
+  </Stack>
+  <div style={{marginTop:"2%"}} >
+  {/* ADD MOVIE */}
+  <Button style={{marginRight:"2%"}} type="submit" variant="contained">ADD MOVIE</Button>
+
+  {/* Back */}
+  <Button type="submit" variant="contained" onClick={()=>{navigate('/allmovies')}} >BACK</Button>
+
+</div>
+</Box>
   );
 }
 

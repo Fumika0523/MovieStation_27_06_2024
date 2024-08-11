@@ -6,21 +6,19 @@ function MovieDisplay({movieData,setMovieData}){
     let displayStyle={
         display:"flex",
         flexWrap:"wrap",
-        gap:"2%",
+        gap:"3%",
         margin:"1.5%",
         // backgroundColor: "black",
         position:"relative",
-       border:"1px solid red",
+    //    border:"1px solid red",
         cursor: "pointer",
-        paddingLeft:"2%"        
+        paddingLeft:"1.7%"        
       }
-
 
     return(
     <>
-
     <div style={displayStyle}>
-        {/* each movie card */}
+    {/* each movie card */}
     {
     movieData?.map((element,index)=>(
     // <MovieCard movieposter={element.movieposter} moviename={element.moviename} rating={element.rating} summary={element.summary} cast={element.cast} key={index} id={index} genres={element.genres} category={element.category} /> //key for the backend , not going to use anymore

@@ -10,7 +10,6 @@ function Footer (){
     }
     return(
         <>
-
         <footer>
             <hr />
             <div className="pt-4 container-fluid text-start d-flex justify-content-evenly gap-2 my-3 ">
@@ -56,7 +55,7 @@ function Footer (){
                 <li style={footerDesign} className="list-group-item">A Family Affair</li>
             </div>
         </div>
-            <div className="footer-copyright text-center py-3">© 2024 Copyright:
+            <div className="footer-copyright text-center py-3 mb-3">© 2024 Copyright:
             <a href=""> MovieStation.com</a>
             </div>
         </footer>

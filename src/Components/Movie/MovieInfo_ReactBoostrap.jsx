@@ -48,13 +48,13 @@ function MovieInfo_ReactBoostrap({movieData}){
           movieInfo && 
 <div>
 <Container>
-  <iframe src={movieInfo?.trailer} frameborder="0" className='opacity-75' style={{width:"100%",height:"750px"}}></iframe>
+  <iframe src={movieInfo?.trailer} frameborder="0" className='opacity-75 mt-4' style={{width:"100%",height:"450px"}}></iframe>
 </Container>
 <div className='d-flex flex-row'>
 
 
 <Container  style={{ width:"43%"}}>
-      <Row className='d-flex flex-column ms-5'>
+      <Row className='d-flex flex-column'>
         <Col>
           <Image className='mt-3' src={movieInfo?.movieposter} roundedCircle style={{height:"330px",width:"93%"}}/>
         </Col>

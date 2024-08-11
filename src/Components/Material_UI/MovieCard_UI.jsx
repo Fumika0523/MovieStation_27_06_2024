@@ -41,9 +41,8 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-
- // const [summaryShow,setSummaryShow] = useState(false)
-  // const [castShow,setCastShow] = useState(false)
+// const [summaryShow,setSummaryShow] = useState(false)
+// const [castShow,setCastShow] = useState(false)
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -52,7 +51,7 @@ const ExpandMore = styled((props) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 370, mb:4 }}  >
+    <Card sx={{ maxWidth:370, mb:4 }}  >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -60,40 +59,50 @@ const ExpandMore = styled((props) => {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <IconButton aria-label="settings" onClick={()=>{
+            navigate(`/movie/in/${id}`)
+        }}>
+        <MoreVertIcon />
+        </IconButton>
         }
         title={moviename}
         subheader={rating}
       />
       <CardMedia
-        component="img"
-        height="195"
-        image={movieposter}
-        alt="movieposter"/>
+    component="img" height="185" image={movieposter}alt="movieposter"/>
      
-      <CardActions disableSpacing>
-        {/* <IconButton aria-label="add to favorites"> */}
-          {/* <FavoriteIcon /> */}
-          <LikeCard/>
-        {/* </IconButton> */}
-        {/* <IconButton aria-label="share"> */}
-          {/* <ShareIcon /> */}
-        {/* </IconButton> */}
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded}>
-        <CardContent>
-          <Typography paragraph>{summary}</Typography>      
-        </CardContent>
-      </Collapse>
+    <CardActions disableSpacing>
+    {/* <IconButton aria-label="add to favorites"> */}
+    {/* <FavoriteIcon /> */}
+    
+    <LikeCard/>
+
+    {/* Edit Icon */}
+    <button className="btn m-0 p-0" onClick={()=>navigate(`/editmovie/${id}`)}><i className="fa-solid fa-pencil text-info"></i></button>
+
+    {/* Delete Icon */}
+    <button className="btn m-0 p-0" onClick={()=>deleteMovie()}><i className="fa-solid fa-trash text-danger  me-2"></i></button>
+    
+    {/* ADD to CART */}
+    <button className="btn m-0 p-0" onClick={()=>{setCartUtxt(cartUCtxt+1)}}><i class="fa-solid fa-cart-shopping text-warning me-2"></i></button>
+    
+    {/* REDUX */}
+    <button className="btn p-0 m-0" onClick={()=>{handleAdditem(element)}}>Redux</button>
+
+    {/* </IconButton> */}
+    {/* <IconButton aria-label="share"> */}
+    {/* <ShareIcon /> */}
+    {/* </IconButton> */}
+
+    <ExpandMore
+    expand={expanded} onClick={handleExpandClick}aria-expanded={expanded} aria-label="show more">
+    <ExpandMoreIcon />
+    </ExpandMore>
+    </CardActions>
+    <Collapse in={expanded}>
+    <CardContent>
+    <Typography paragraph>{summary}</Typography>      
+    </CardContent>
+    </Collapse>
     </Card>
   )}
