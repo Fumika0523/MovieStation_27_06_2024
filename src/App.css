@@ -9,6 +9,8 @@
   margin: 0;
   /* border: 1px solid green; */
 }
+
+
 .summaryDesign{
  margin:0 5px 0 5px;
  /* border: 1px solid red; */
@@ -71,3 +73,23 @@ body{
   cursor: pointer;
 }
 
+.input-icons, .icon {
+  /* border: 1px solid red; */
+  position: absolute;
+}
+
+.icon{
+  color:grey;
+  
+}
+
+ .input-field{
+  padding:3px 60px 0px 30px;
+  text-align:left;
+} 
+
+input:hover {
+  cursor: pointer;
+  transform: scale(1.1,1.1);
+  color:grey;
+}

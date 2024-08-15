@@ -51,7 +51,7 @@ const ExpandMore = styled((props) => {
   };
 
   return (
-    <Card sx={{ maxWidth:370, mb:4 }}  >
+    <Card sx={{ maxWidth:360, mb:2 }}  >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -71,23 +71,23 @@ const ExpandMore = styled((props) => {
       <CardMedia
     component="img" height="185" image={movieposter}alt="movieposter"/>
      
-    <CardActions disableSpacing>
+    <CardActions disableSpacing style={{border:"1px solid red"}}>
     {/* <IconButton aria-label="add to favorites"> */}
     {/* <FavoriteIcon /> */}
     
     <LikeCard/>
 
     {/* Edit Icon */}
-    <button className="btn m-0 p-0" onClick={()=>navigate(`/editmovie/${id}`)}><i className="fa-solid fa-pencil text-info"></i></button>
+    <button className="btn px-1" onClick={()=>navigate(`/editmovie/${id}`)}><i className="fa-solid fa-pencil text-white"></i></button>
 
     {/* Delete Icon */}
-    <button className="btn m-0 p-0" onClick={()=>deleteMovie()}><i className="fa-solid fa-trash text-danger  me-2"></i></button>
+    <button className="btn px-2" onClick={()=>deleteMovie()}><i className="fa-solid fa-trash text-white"></i></button>
     
     {/* ADD to CART */}
-    <button className="btn m-0 p-0" onClick={()=>{setCartUtxt(cartUCtxt+1)}}><i class="fa-solid fa-cart-shopping text-warning me-2"></i></button>
+    <button className="btn px-1" onClick={()=>{setCartUtxt(cartUCtxt+1)}}><i class="fa-solid fa-cart-shopping text-white"></i></button>
     
     {/* REDUX */}
-    <button className="btn p-0 m-0" onClick={()=>{handleAdditem(element)}}>Redux</button>
+    <button className="btn px-w text-white" onClick={()=>{handleAdditem(element)}}>Redux</button>
 
     {/* </IconButton> */}
     {/* <IconButton aria-label="share"> */}

@@ -6,6 +6,9 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+
+
+
 function NavBar ({mode,setMode}){
   const location = useLocation();
   console.log(location)
@@ -26,35 +29,36 @@ function NavBar ({mode,setMode}){
 
     return(
         <>
-    <nav className="navbar bg-black navbar-expand-lg sticky-top">
-      <div className="container ms-5">
-        <span className="fs-4 text-warning"><i className="fa-solid fa-couch"></i><i className="fa-solid fa-wine-glass"></i></span>
-        <a className="navbar-brand text-white ms-2 p-0 fs-5" href="#">MovieStation</a>
         
-        <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul className="navbar-nav gap-3">
+    <nav className="navbar bg-black navbar-expand-lg sticky-top justify-content-between ps-5">
+        <span className="fs-4 text-warning"><i className="fa-solid fa-couch"></i><i className="fa-solid fa-wine-glass"></i><a className="navbar-brand text-white fs-5 ms-1" href="#">MovieStation</a></span>
+        <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ms-auto">
+        {/* <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul className="navbar-nav gap-3"> */}
             {/* <!-- Home --> */}
-          <div ><Link to='/' className="text-secondary text-decoration-none">Home</Link></div>
+          <a className="nav-link"><Link to='/' className="text-secondary text-decoration-none">Home</Link></a>
           {/* <!-- About Us --> */}
-          <div><Link to='/about' className="text-secondary text-decoration-none" >About Us</Link></div>
+          <a className="nav-link"><Link to='/about' className="text-secondary text-decoration-none" >About Us</Link></a>
           
           {/* Movie */}
-          <div><Link to='/allmovies' className="text-secondary text-decoration-none">All Movies</Link></div>
+          <a className="nav-link"><Link to='/allmovies' className="text-secondary text-decoration-none">All Movies</Link></a>
           {/* AddMovie */}
-          <div><Link to='/addmovie' className="text-secondary text-decoration-none">Add Movie</Link></div>
+          <a className="nav-link"><Link to='/addmovie' className="text-secondary text-decoration-none">Add Movie</Link></a>
           {/* Cart */}
           {/* <div><Link to='/addtocart' className="text-secondary text-decoration-none">Add to Cart{cartNavbar}</Link></div> */}
 
             {/* Redux */}
-            <span><Link to='/cartpage' className="text-secondary text-decoration-none"><ShoppingCartIcon/>{cartItems.length}</Link></span>
-
-           
+            <a className="nav-link"><Link to='/cartpage' className="text-secondary text-decoration-none"><ShoppingCartIcon/>{cartItems.length}</Link></a>
             {/* <!-- Service --> */}
-          <div><Link to='/services' className="text-secondary text-decoration-none">Service</Link></div>
+            <a className="nav-link"><Link to='/services' className="text-secondary text-decoration-none">Service</Link></a>
             {/* <!-- Contact Us --> */}
-           <div><Link to='/contact' className="text-secondary text-decoration-none">Contact Us</Link></div>
-
-            <input type="text" name="" id="" placeholder="Search movie" 
+            <a className="nav-link"><Link to='/contact' className="text-secondary text-decoration-none">Contact Us</Link></a>
+            </ul>
+          {/* Search*/}
+          <form>
+          <div className="iput-icons">
+          <i className="fas fa-search icon fs-5 pt-2 ms-2"></i>
+            <input className="input-field" type="search" aria-label="Search" name="" id="" placeholder="Search movie"
             onChange={()=>{
               this.setState({
                 query: this.search.value
@@ -62,8 +66,10 @@ function NavBar ({mode,setMode}){
             }
              
           }/>
+          </div>
 
-            <div><span
+          </form>
+            <div className="me-5"><span 
             onClick={()=>{
               //setMode("light")
               //true?"truedata":"falsedata"
@@ -72,9 +78,10 @@ function NavBar ({mode,setMode}){
             }}>
               {mode==="light"?<DarkModeIcon/>:<LightModeIcon/>}
               </span></div>
-          </ul>
-        </div>
-      </div>
+         
+        {/* </ul> */}
+        {/* </div> */}
+      
       </nav>
       {/* {shouldRenderHeader && <Header/>} */}
     </>

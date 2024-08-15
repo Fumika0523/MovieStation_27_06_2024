@@ -78,7 +78,7 @@ function MovieCard ({movieposter,moviename,rating,summary,cast,id,setMovieData,e
         <div  style={{display:"flex",justifyContent:"center"}}>
      
     {/* PLUS ICON */}
-    <button className="btn p-0 m-0" style={movieIcons} onClick={()=>{
+    <button className="btn" style={movieIcons} onClick={()=>{
         setSummaryShow(!summaryShow)
         setCastShow(false)
     }}>

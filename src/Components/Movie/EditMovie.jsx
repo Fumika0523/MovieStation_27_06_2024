@@ -25,7 +25,7 @@ useEffect(()=>{
         <>
         {
         singleMovie?
-        <EditMovieForm singleMovie={singleMovie} id={id}/>//LOAD WHEN API COMPLETED
+        <EditMovieForm  singleMovie={singleMovie} id={id}/>//LOAD WHEN API COMPLETED
         :
         <p>Loading..........</p>//When API CALL IS RUNNING
     }        
@@ -86,8 +86,8 @@ const [textUseContext,setTextUseContext]=useContext(textContext)
 
 return(
     <>
-    <h6>{textUseContext}</h6>
-    <div className="w-75 mx-auto text-center">
+    <h6 className="mx-5 mt-4 text-left">{textUseContext}</h6>
+    <div className="w-75 mx-auto text-center mb-5">
         <h2 className="m-4">Edit Movie</h2>
         <input className="border rounded" style={addFormDesign}  type="text" id=""  name="" placeholder="Moviename" value={movieName} onChange={(e)=>setMovieName(e.target.value)} /><br />
         <input className="border rounded" style={addFormDesign} type="text" placeholder="Movieposter" value={moviePoster} onChange={(e)=>setMoviePoster(e.target.value)}/><br />
@@ -105,6 +105,7 @@ return(
             updateMovies() }}>Update Movie</button>
         <button className="btn btn-warning mx-3" onClick={()=>{navigate('/allmovies')}}>Back</button>
     </div>
+  
     </>
 )
 }

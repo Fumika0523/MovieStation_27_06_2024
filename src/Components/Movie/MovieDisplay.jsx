@@ -6,13 +6,12 @@ function MovieDisplay({movieData,setMovieData}){
     let displayStyle={
         display:"flex",
         flexWrap:"wrap",
-        gap:"3%",
-        margin:"1.5%",
+        gap:"1%",
+        margin:"1% 1% 1% 1%",
         // backgroundColor: "black",
         position:"relative",
     //    border:"1px solid red",
-        cursor: "pointer",
-        paddingLeft:"1.7%"        
+        cursor: "pointer",    
       }
 
     return(

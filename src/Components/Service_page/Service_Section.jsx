@@ -1,6 +1,6 @@
 import Service_TopDesign from './Service_TopDesign'
 import Service_MiddleDesign from './Service_MiddleDesign'
-import Service_BottomDesign from './Service_BottomDesign'
+import Service_BottomDesign from './Service_page/Service_BottomDesign'
 
 function Service_Section (){
     return(
