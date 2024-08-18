@@ -30,9 +30,9 @@ function NavBar ({mode,setMode}){
     return(
         <>
         
-    <nav className="navbar bg-black navbar-expand-lg sticky-top justify-content-between ps-5">
+    <nav className="navbar navbar-expand-lg sticky-top justify-content-between ps-5 navbar navbar-dark bg-dark">
         <span className="fs-4 text-warning"><i className="fa-solid fa-couch"></i><i className="fa-solid fa-wine-glass"></i><a className="navbar-brand text-white fs-5 ms-1" href="#">MovieStation</a></span>
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ms-auto">
+        <ul className="navbar-nav mr-auto mt-lg-0 ms-auto">
         {/* <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul className="navbar-nav gap-3"> */}
             {/* <!-- Home --> */}
@@ -56,9 +56,9 @@ function NavBar ({mode,setMode}){
             </ul>
           {/* Search*/}
           <form>
-          <div className="iput-icons">
-          <i className="fas fa-search icon fs-5 pt-2 ms-2"></i>
-            <input className="input-field" type="search" aria-label="Search" name="" id="" placeholder="Search movie"
+          <div className="iput-icons d-flex flex-row">
+          <i className="fas fa-search icon fs-5 pt-2 ps-3"></i>
+            <input className="form-control px-5" type="search" aria-label="Search" name="" id="" placeholder="Search movie"
             onChange={()=>{
               this.setState({
                 query: this.search.value
@@ -66,6 +66,7 @@ function NavBar ({mode,setMode}){
             }
              
           }/>
+          <button class="btn btn-secondary ms-3 me-2 text-nowrap " type="submit">Sign In</button>
           </div>
 
           </form>

@@ -6,8 +6,8 @@ function MovieDisplay({movieData,setMovieData}){
     let displayStyle={
         display:"flex",
         flexWrap:"wrap",
-        gap:"1%",
-        margin:"1% 1% 1% 1%",
+        gap:"2.7%",
+        margin:"1% 4% 1% 4%",
         // backgroundColor: "black",
         position:"relative",
     //    border:"1px solid red",

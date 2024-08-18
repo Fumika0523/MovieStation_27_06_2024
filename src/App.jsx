@@ -1,8 +1,8 @@
 import './App.css'
-import AboutUs_Section from './Components/AboutUs_Section';
+import AboutUs_Section from './Components/AboutUs_page/AboutUs_Section';
 import MovieDisplay from './Components/Movie/MovieDisplay';
 import NavBar from './Components/NavBar';
-import Service_Section from './Components/Service_Section';
+import Service_Section from './Components/Service_page/Service_Section';
 import ContactUs_Section from './Components/ContactUs_Section';
 import Homepage from './Components/Homepage';
 import {Route,Routes} from 'react-router-dom';
@@ -158,3 +158,11 @@ export default App
 //Remove the heading from All Movie page.     <<<------
 
 
+// arrow on All Movie, message overlay cover the above a half of image , expand to the above
+//service page 
+//shift home to the left side
+
+//signin,sign up, sign out, create these buttons
+
+//signin and signup  >>>
+// SIgn out  >> when you are inside the application

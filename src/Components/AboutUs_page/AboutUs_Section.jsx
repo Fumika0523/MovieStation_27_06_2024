@@ -1,6 +1,6 @@
 import AboutUs_TopDesign from "./AboutUs_TopDesign"
-import AboutUs_BottomDesign from "./AboutUs_page/AboutUs_BottomDesign"
-import AboutUs_ImageBanner from "./AboutUs_page/AboutUs_ImageBanner"
+import AboutUs_BottomDesign from "./AboutUs_BottomDesign"
+import AboutUs_ImageBanner from "./AboutUs_ImageBanner"
 import { useNavigate } from 'react-router-dom'
 
 const topDesignData=[

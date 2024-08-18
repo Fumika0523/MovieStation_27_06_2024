@@ -51,10 +51,10 @@ const ExpandMore = styled((props) => {
   };
 
   return (
-    <Card sx={{ maxWidth:360, mb:2 }}  >
+    <Card sx={{ maxWidth:440, mb:4 }}  >
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: red[600] }} aria-label="movietitle">
             {moviename.substring(0,1)}
           </Avatar>
         }
@@ -71,7 +71,7 @@ const ExpandMore = styled((props) => {
       <CardMedia
     component="img" height="185" image={movieposter}alt="movieposter"/>
      
-    <CardActions disableSpacing style={{border:"1px solid red"}}>
+    <CardActions>
     {/* <IconButton aria-label="add to favorites"> */}
     {/* <FavoriteIcon /> */}
     
