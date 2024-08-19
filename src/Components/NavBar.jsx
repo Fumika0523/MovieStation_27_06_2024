@@ -6,15 +6,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-
-
-
 function NavBar ({mode,setMode}){
   const location = useLocation();
   console.log(location)
 
   // const excludedPaths = [`/movie/in/The%20Godfather`]; //paths where header should be excpluded
-  const includedPaths = ["/","/allmovies","/about","/services","/contact"] //2nd option, rount you wanted you mention the all pages that you want to show
+  const includedPaths = ["/","/allmovies","/about","/services","/contact","/signup","/signin"] //2nd option, rount you wanted you mention the all pages that you want to show
   //Check if current path is in the excludedPaths array
   const shouldRenderHeader = includedPaths.includes(location.pathname)
   console.log(shouldRenderHeader)
@@ -52,12 +49,12 @@ function NavBar ({mode,setMode}){
             {/* <!-- Service --> */}
             <a className="nav-link"><Link to='/services' className="text-secondary text-decoration-none">Service</Link></a>
             {/* <!-- Contact Us --> */}
-            <a className="nav-link"><Link to='/contact' className="text-secondary text-decoration-none">Contact Us</Link></a>
+            <a className="nav-link"><Link to='/contact' className="text-secondary text-decoration-none me-2">Contact</Link></a>
             </ul>
           {/* Search*/}
           <form>
           <div className="iput-icons d-flex flex-row">
-          <i className="fas fa-search icon fs-5 pt-2 ps-3"></i>
+          <i className="fas fa-search icon fs-5 pt-2 ps-3 "></i>
             <input className="form-control px-5" type="search" aria-label="Search" name="" id="" placeholder="Search movie"
             onChange={()=>{
               this.setState({
@@ -66,7 +63,9 @@ function NavBar ({mode,setMode}){
             }
              
           }/>
-          <button class="btn btn-secondary ms-3 me-2 text-nowrap " type="submit">Sign In</button>
+          <a className="nav-link"><button className="btn text-white text-nowrap mx-3" type="submit"><Link to='/signin' className="text-secondary text-decoration-none mx-2">Sign in</Link></button></a>
+          <a className="nav-link"><button type="submit" className="btn btn-secondary me-3 text-nowrap "><Link to='/signup' className=" text-decoration-none mx-1 text-white">Sign up</Link></button> </a>
+
           </div>
 
           </form>

@@ -20,8 +20,9 @@ import textSlice from './utils/textSlice';
 import Cartpage from './Components/Cartpage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-
-
+import SignUp from './Components/SignIn_Up_Out/SignUp';
+import SignOut from './Components/SignIn_Up_Out/SignOut';
+import SignIn from './Components/SignIn_Up_Out/SignIn';
 function App() {
   const AboutUs_LastSection = [
     {    
@@ -97,6 +98,9 @@ const [mode, setMode]=useState("dark")
       <Route path="/movie/in/:id" element={<MovieInfo_ReactBoostrap movieData={movieData}/>}/>
       <Route path="/editmovie/:id" element={<EditMovie movieData={movieData} />}/>
       <Route path="/cartpage" element={<Cartpage/>}></Route>
+      <Route path="/signin" element={<SignIn/>}></Route>
+      <Route path="/signup" element={<SignUp/>}></Route>
+      <Route path="/signout" element={<SignOut/>}></Route>
     </Routes>
     <div style={{position:"relative"}}>
     <Footer />
