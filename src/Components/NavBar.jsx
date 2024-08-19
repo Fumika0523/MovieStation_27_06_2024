@@ -63,7 +63,7 @@ function NavBar ({mode,setMode}){
             }
              
           }/>
-          <a className="nav-link"><button className="btn text-white text-nowrap mx-3" type="submit"><Link to='/signin' className="text-secondary text-decoration-none mx-2">Sign in</Link></button></a>
+          <a className="nav-link"><button className="btn text-white text-nowrap mx-3" type="submit"><Link to='/signin' className="text-secondary text-decoration-none">Sign in</Link></button></a>
           <a className="nav-link"><button type="submit" className="btn btn-secondary me-3 text-nowrap "><Link to='/signup' className=" text-decoration-none mx-1 text-white">Sign up</Link></button> </a>
 
           </div>
