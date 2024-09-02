@@ -50,11 +50,6 @@ function App() {
     console.log(data)
     setMovieData(data)
   }
-    //   const movieDetails = [
-    //     {
-    //         movieTrailer:"https://www.youtube.com/embed/YqNYrYUiMfg",
-    //     }
-    // ]
 
   useEffect(()=>{
     getMovieData()
@@ -70,32 +65,21 @@ const [mode, setMode]=useState("dark")
 
   return (
     <>
-    
   <ThemeProvider theme={theme}>
-     {/* your design */}
   <CssBaseline /> 
   <Provider store={store}>
     <cartContext.Provider value={[cartUCtxt,setCartUtxt]}>
     <textContext.Provider value={[textUseContext,setTextUseContext]}>
-    {/* <div style={{backgroundColor:"black",color:"white",}}> */}
     <div>
-    <NavBar mode={mode} setMode={setMode} />
-    {/* <AddMovie_Formik setMovieData={setMovieData}/>   */}
-    {/* <MovieDisplay movie={movie} /> */}
+    <NavBar mode={mode} setMode={setMode}/>
     <Routes>
       <Route path="/" element={<Homepage movieData={movieData}/>}/>
-      {/* prop name should be same as a useState valiable */}
-  
-      <Route path='/allmovies' element={<MovieDisplay movieData={movieData} setMovieData={setMovieData} />}/>
-      {/* <Route path='/addmovie' element={<AddMovie setMovieData={setMovieData} />}/> */}
+      <Route path='/allmovies' element={<MovieDisplay movieData={movieData} setMovieData={setMovieData}/>}/>
       <Route path='/addmovie' element={<AddMovie_UI setMovieData={setMovieData}/>}/>
       <Route path='/about' element={<AboutUs_Section/>}/>
       <Route path='/services' element={<Service_Section/>}/>
       <Route path='/contact' element={<ContactUs_Section/>}/>
-      {/* <Route path="/movie/in/:id" element={<MovieInfo movie={movie}/>}/> */}
-      {/* link to the particular URL and search in the route to Render */}
-      {/*When you click the INFO btn and it will take you to the specic URL (/movie/in/xx) change, (Dynamic routing /: xxx), so you can get I movie */}
-      <Route path="/movie/in/:id" element={<MovieInfo_ReactBoostrap movieData={movieData}/>}/>
+      <Route path="/movie/in/:id" element={<MovieInfo_ReactBoostrap movieData={movieData} setMovieData={setMovieData}/>}/>
       <Route path="/editmovie/:id" element={<EditMovie movieData={movieData} />}/>
       <Route path="/cartpage" element={<Cartpage/>}></Route>
       <Route path="/signin" element={<SignIn/>}></Route>
@@ -105,12 +89,6 @@ const [mode, setMode]=useState("dark")
     <div style={{position:"relative"}}>
     <Footer />
     </div>
-    {/* {
-        movieData.map((element,index)=>(
-          // console.log(element.movieposter)
-         <MovieCard {...element}/>
-        ))
-    } */}
     </div>
     {/* </div> */}
     </textContext.Provider>
@@ -150,7 +128,6 @@ export default App
 //2:Only visible on All Movie page
 
 //Footer, check the title
-//AllMovies page, 3 films in 1 row with a more width
 //Add the icon for add to cart, Redux  
 //3 dots will link to particular page , trailer page, (Infor button)
 //Summary for arrow function hire/unhide (show only 3-4 line) all the cards are similar
@@ -165,8 +142,6 @@ export default App
 // arrow on All Movie, message overlay cover the above a half of image , expand to the above
 //service page 
 //shift home to the left side
-
-//signin,sign up, sign out, create these buttons
 
 //signin and signup  >>>
 // SIgn out  >> when you are inside the application

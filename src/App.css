@@ -1,15 +1,31 @@
+.bg-header-image{
+width:100vw;
+height:700px;
+object-fit: cover;
+margin-top:-150px
+}
+
+.navbar-scrolled{
+background-color: black;
+box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.navbar{
+transition: all 0.5s
+}
+
+
 .text1{
   font-size: 15px;
   margin: 0;
   /* border: 1px solid green; */
-
 }
+
 .text2{
   font-size: 15px;
   margin: 0;
   /* border: 1px solid green; */
 }
-
 
 .summaryDesign{
  margin:0 5px 0 5px;
@@ -41,9 +57,8 @@
   width:280px ;
 
 } 
-.cardDesign:hover .movieContent{ 
 
-  /* transform: scale(0.9); */
+.cardDesign:hover .movieContent{ 
   display: block;
   z-index: 1000;
    /* border:1px solid green;  */
@@ -64,8 +79,7 @@
 }
 
 body{
-  background-color: black;
-  color: white;
+overflow-x:hidden;
 }
 
 .nav-link:hover{

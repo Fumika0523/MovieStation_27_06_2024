@@ -50,66 +50,55 @@ function MovieInfo_ReactBoostrap({movieData}){
 <Container>
   <iframe src={movieInfo?.trailer} frameborder="0" className='opacity-75 mt-4' style={{width:"100%",height:"450px"}}></iframe>
 </Container>
-<div className='d-flex flex-row'>
-
-
-<Container  style={{ width:"43%"}}>
-      <Row className='d-flex flex-column'>
+{/* Middle Section */}
+<Container className='d-flex'  style={{ height:"450px"}}>
+     {/* Left Section */}
+      <div>
         <Col>
-          <Image className='mt-3' src={movieInfo?.movieposter} roundedCircle style={{height:"330px",width:"93%"}}/>
-        </Col>
-         {/* GREY SECTION */}
+          <Image className='align-self-center my-3' src={movieInfo?.movieposter} roundedCircle style={{width:"420px",height:"370px"}}/>
+        {/* GREY SECTION */}
+        <div className='d-flex justify-content-center gap-3'>
         {/* List */}
-        <Col style={{width:"88%"}} className=' d-flex flex-row bg-secondary text-white py-2'> <i style={iconStyle} className="fa-solid fa-bookmark">
-            <span style={fontStyle}>List</span>
-          </i>
+        <button type="button" className="px-3 btn btn-secondary d-flex"> <i className="fa-solid fa-bookmark fs-5 px-1"></i>List</button>
         {/* Seen all */}
-        <i style={iconStyle} className=" fa-solid fa-check">
-            <span  style={fontStyle} className="mt-1" >Seen all</span>
-          </i>
-        {/*100*/}
-     <i style={iconStyle} className="fa-solid fa-thumbs-up">
-            <span className="mt-1" style={fontStyle}>{movieInfo.likeNum}</span>
-          </i>
+        <button type="button" className=" px-3 btn btn-secondary d-flex text-nowrap"> <i className="fa-solid fa-check px-1 fs-5"></i>Seen all</button>
+        {/*Like*/}
+        <button type="button" className=" px-3 btn btn-secondary d-flex"> <i className="fa-solid fa-thumbs-up px-1 fs-5"></i>{movieInfo.likeNum}</button>
      {/* disLike */}
-        <i style={iconStyle} className=" fa-solid fa-thumbs-down ">
-            <span className="mt-1" style={fontStyle}>{movieInfo.disLikeNum}</span>
-          </i></Col>
+          <button type="button" className="px-3 btn btn-secondary d-flex"> <i className="fa-solid fa-thumbs-down px-1 fs-5"></i>{movieInfo.disLikeNum}</button>
+
+          </div>
+        </Col>
+      </div>
+    {/* MIDDLE  SECTION */}
+    {/* Middle-TOP */}
+      <Row className='d-flex mx-5' style= {{ width:"55%"}}>
+      <div className='d-flex pt-3  align-items-start' style={{height:"20%"}}>
+      <Col className="fs-2 fw-bold">{movieInfo.moviename}</Col>
+      <Col className="fs-2 text-secondary">{movieInfo.publishYear}</Col>
+      </div>
+      <div>
+      <Col className="text-start" style={{height:"80%"}} >{movieInfo.summary}</Col>
+      <Button  variant="warning" style={{width:"20%"}} onClick={()=>{
+          navigate(`/`)
+        }}>Back</Button>{' '}
+      </div>
       </Row>
-  </Container>
-  <div className='d-flex flex-column'>
-  <Container>
-    {/* TOP SECTION */}
-      <Row className='align-items-center'>
-      <Col className="fs-2 fw-bold text-start">{movieInfo.moviename}</Col>
+      <Row className='d-flex flex-column gap-3 text-start' style={{width:"45%"}}>
+      <div className='d-flex pt-3' style={{height:"15%"}}></div>
+      <div className='xs-12'>Cast : {movieInfo.cast}</div>
+      <div className='xs-12'>Genres : {movieInfo.genres}</div>
+      <div className='xs-12'>This show is : {movieInfo.category}</div>
       </Row>
-      <Row>
-      <Col className="fs-3 text-secondary text-start">{movieInfo.publishYear}</Col>
-      </Row>
-    
-      </Container>
-          {/* Second Section */}
-      <Container className='d-flex flex-wrap justify-content-between'>
-      <Row style={{border:"1px solid black",width:"50%"}} >
-      <Col xs={12} className='mt-2' >{movieInfo.summary} </Col>
-      </Row>
-      <Row style={{border:"1px solid black", width:"50%"}} className='flex-column'>
-      <Col xs={12} className='mt-2' >Cast : {movieInfo.cast}</Col>
-      <Col xs={12} className='mt-2'>Genres : {movieInfo.genres}</Col>
-      <Col xs={12} className='mt-2 mb-2'>This show is : {movieInfo.category}</Col>
-      </Row>
-    </Container>
+   
     
         {/* <Col className='fs-4 text-warning'>Watch Now</Col> */}
 
-       {/* Back Button */}
-        <Button  variant="warning" className="mt-3" style={{width:"20%"}} onClick={()=>{
-          navigate(`/`)
-        }}>Back</Button>{' '}
-        
+      
+         </Container>
 </div>
-</div>
-</div>
+// </div>
+// {/* </div> */}
 }
         {/* Carousel */}
       <Carousel className='my-5'>

@@ -7,7 +7,6 @@ import Header from "./Header"
 function Homepage({movie}){
     return(
         <>
-        {/* <MovieDisplay movie={movie}/> */}
         <Header/>
         <AboutUs_Section/>
         <Service_Section/>

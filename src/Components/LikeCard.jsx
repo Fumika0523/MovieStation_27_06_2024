@@ -1,8 +1,10 @@
 import { useState } from "react";
 
+
 function LikeCard(){
     const [like,setLike] = useState(0)
     const [disLike,setDisLike] = useState(0)
+
     return(
         <>
         {/* <i style={{color:"green",marginRight:"5px"}} className="fa-regular fa-thumbs-up" onClick={()=>{
