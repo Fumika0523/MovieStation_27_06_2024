@@ -1,25 +1,31 @@
 import React from "react"
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-function SignIn (){
-    return(
-        <>
-<form  className="container my-5 d-flex flex-column justify-content-center w-25 " >
+function SignIn() {
+  return (
+    <Form style={{width:"30%",border:"1px solid grey",borderRadius:"10%"}} className="mx-auto my-5 p-5">
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <h1 className="mb-5">Sign in</h1>
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
 
-  <div class="mb-3 ">
-    <label for="exampleInputPassword1" class="form-label">Email</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"/>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"/>
-  </div>
- <div>
-  <button type="submit" class="btn btn-secondary my-4">Submit</button>
-  </div>
-  </form>
-        </>
-    )
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      </Form.Group>
+      <Button variant="primary mt-5" type="submit">
+        Submit
+      </Button>
+    </Form>
+  );
 }
 
-export default SignIn
+export default SignIn;
 

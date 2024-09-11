@@ -6,7 +6,7 @@ function AboutUs_TopDesign ({design,imgUrl,heading1,heading2,textSummary,btnComm
         <div>
     {heading2}
         </div>
-    <img src={imgUrl} alt="" style={{width:"320px",height:"250px"}} className="my-4"/>
+    <img src={imgUrl} alt="" style={{width:"50%",height:"250px"}} className="my-4"/>
     <p className="fs-6">
         {textSummary}
     </p>

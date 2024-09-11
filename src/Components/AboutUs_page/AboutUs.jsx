@@ -25,7 +25,7 @@ function AboutUs(){
     <div className="text-end">
     Apps for movie & TV show fans
     </div>
-    <img src="https://images.unsplash.com/photo-1615986200762-a1ed9610d3b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHR2JTIwc2NyZWVufGVufDB8fDB8fHww" alt="" style={{width:"320px",height:"250px"}} className="my-4"/>
+    <img src="https://images.unsplash.com/photo-1615986200762-a1ed9610d3b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHR2JTIwc2NyZWVufGVufDB8fDB8fHww" alt="" style={{width:"50%x",height:"250px"}} className="my-4"/>
     <p className="fs-6">
     We show you where you can legally watch movies and TV shows that you love. You are kept up to date with what is new on Netflix, Amazon Prime, Apple TV and many other streaming platforms. Our simple filter system allows you to see only what is important to you.
     We also allow users to track their favorite shows and movies, and can notify you when a title is available on one of your services..
@@ -43,7 +43,7 @@ function AboutUs(){
     <p className="fs-6">
     JustWatch Media helps Entertainment brands around the world get to grips with new challenges and opportunities. From blockbuster movies, award winning shows, major sporting events and console games, we buy media for our clients across the major digital platforms. We offer our clients something no one else can, media buying based on audience content tastes.
     </p>
-    <button type="button" className="btn btn-secondary mt-4">Learn more about our marketing campaigns</button>
+    <button type="button" className="btn btn-secondary mt-4 ">Learn more about our marketing campaigns</button>
     </div>
     {/* last section */}
     <h4 className= "text-center py-4">WE WANT HEAR FROM YOU</h4>
