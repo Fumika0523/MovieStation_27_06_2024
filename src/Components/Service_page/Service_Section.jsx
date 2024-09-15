@@ -1,4 +1,4 @@
-import Service_TopDesign from './Service_TopDesign'
+import Service_TopDesign from './Service_MiddleDesign1'
 import Service_MiddleDesign from './Service_MiddleDesign'
 import Service_BottomDesign from './Service_BottomDesign'
 
