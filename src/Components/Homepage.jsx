@@ -11,7 +11,8 @@ function Homepage({movie}){
         <AboutUs_Section/>
         <Service_Section/>
         <ContactUs_Section/>
-        </>
+        
+               </>
     )
 }
 export default Homepage

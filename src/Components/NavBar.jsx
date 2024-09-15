@@ -39,7 +39,7 @@ function NavBar({ mode, setMode }) {
     <>
       <nav className="navbar navbarStyle sticky-top navbar-expand-lg">
         <div className="container-fluid">
-          <span className="ms-3 fs-4 text-warning navbar-brand"><i className="fa-solid fa-couch"></i><i className="fa-solid fa-wine-glass"></i><a className="navbar-brand text-white fs-5 ms-1" href="#">MovieStation</a></span>
+          <span className="ms-3 fs-4 text-warning navbar-brand"><i className="fa-solid fa-couch"></i><i className="fa-solid fa-wine-glass"></i><a className="navbar-brand text-white fs-5 ms-1" href="#">123Film.com</a></span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -65,15 +65,15 @@ function NavBar({ mode, setMode }) {
             {/* Search*/}
             <form>
               <div className="iput-icons d-flex flex-row">
-                <i className="fas fa-search icon fs-4 pt-2 ps-3 "></i>
-                <input className="form-control px-5 me-2" type="search" aria-label="Search" name="" id="" placeholder="Search movie"
+                <i className="fas fa-search icon fs-5 pt-1 ps-1 "></i>
+                <input className="form-control" style={{width:"40%",height:"28px"}} type="search" aria-label="Search" name="" id="" placeholder="   Search movie"
                   onChange={() => {
                     this.setState({
                       query: this.search.value
                     }, this.filterArray)
                   }} />
-                <a className="nav-link"><button className="btn text-white text-nowrap mx-2" type="submit"><Link to='/signin' className="text-secondary text-decoration-none">Sign in</Link></button></a>
-                <a className="nav-link"><button type="submit" className="btn btn-secondary me-3 text-nowrap "><Link to='/signup' className=" text-decoration-none mx-1 text-white">Sign up</Link></button> </a>
+                <a className="nav-link"><button className="btn text-white text-nowrap mx-3 p-1" type="submit"><Link to='/signin' className="text-secondary text-decoration-none">Sign in</Link></button></a>
+                <a className="nav-link"><button type="submit" className="btn btn-secondary p-1 me-3 text-nowrap "><Link to='/signup' className=" text-decoration-none mx-1 text-white">Sign up</Link></button> </a>
               </div>
             </form>
             <div className="me-3"><span
